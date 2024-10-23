@@ -1,0 +1,42 @@
+/* css reset */
+*,
+*::after,
+*::backdrop {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  padding: 0;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background-image: url('../images/bg.jpg');
+}
+
+.login-label {
+  .login-input {
+    padding-left: 2.5rem;
+  }
+
+  .login-input:focus {
+    /* border-color: black; */
+    box-shadow: none;
+  }
+
+  .input-icon {
+    left: 1rem;
+    top: 50%;
+    translate: 0 -50%;
+    color: #868686;
+  }
+}
+
+.form-control.submit-btn-focus:focus,
+.form-control.submit-btn-focus:hover {
+  background-color: black !important;
+  box-shadow: none;
+  border: none;
+}

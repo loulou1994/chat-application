@@ -1,0 +1,11 @@
+{% extends 'auth_layout.html' %}
+{% from 'helpers/_login-macro.html' import login_input %}
+
+{% block title %}Signup page{% endblock %}
+{% block auth_type_title %}Sign up{% endblock %}
+
+{% block form_data %}
+  {{ form.hidden_tag() }} {% for form_input in form %} {% if form_input.name in ['email', 'password', 'username', 'confirm_pwd'] %} 
+  {{ login_input(form_input) }} {% endif %} {% endfor %} {{form.submit(class="rounded-pill form-control
+  form-control-lg submit-btn-focus fw-bold bg-primary bg-opacity-75 text-light bg-dark-hover")}}
+{% endblock %}

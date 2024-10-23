@@ -1,0 +1,18 @@
+{% macro login_input(input) %}
+<div class="container-fluid px-0 login-label position-relative">
+  <!-- <div class="position-relative"> -->
+    {{ input.label(class="visually-hidden") }} {{ input(class="form-control
+    form-control-lg rounded-pill login-input bg-secondary-subtle") }}
+    <span class="position-absolute input-icon"
+      ><i class="bi {{ input.render_kw.icon_class }} h5"></i
+    ></span>
+  <!-- </div> -->
+    <!-- {% if input.errors %}
+      <ul class="errors">
+        {% for error_msg in input.errors %}
+          <li class="invalid-feedback">{{ error_msg }}</li>
+        {% endfor %} 
+      </ul>
+    {% endif %} -->
+</div>
+{%- endmacro %}
